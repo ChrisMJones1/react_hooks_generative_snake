@@ -13,11 +13,10 @@ interface Color {
 function App() {
     const [mouseHover, setMouseHover] = useState(false);
 
-    const [donnie, setDonnie] = useState('donnie');
 
 
 
-    const [dots, setDots] = useState([<Dot key={0} x={30} y={30} />]);
+    const [dots, setDots] = useState<JSX.Element[]>([]);
     const [count, setCount] = useState(1);
 
 
@@ -34,7 +33,6 @@ function App() {
             newElement.shift();
         }
         setDots(newElement);
-        setDonnie(donnie === 'donnie' ? 'no_donnie' : 'donnie');
     };
 
 
@@ -42,7 +40,6 @@ function App() {
 
 
     <svg onMouseMove={_onMouseMove} className="App" style={{width: "100vw", height: "100vh"}}>
-        <text x={20} y={20}>{donnie}</text>
         <Dots dots={dots}/>
     </svg>
   );
