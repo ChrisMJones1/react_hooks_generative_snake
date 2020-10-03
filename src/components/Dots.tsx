@@ -16,8 +16,8 @@ interface randomSeed {
     radius: number;
     color: Color
 }
-//@ts-ignore
-function Dots(props) {
+
+function Dots(props: {dots: JSX.Element[]}) {
 
 
     return (

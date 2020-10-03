@@ -28,8 +28,6 @@ function Dot(props) {
     }
 
     const [color, setColor] = useState(getRndRgbColor);
-    // const [x, setX] = useState(getRndInteger(0, window.innerWidth, true));
-    // const [y, setY] = useState(getRndInteger(0, window.innerHeight, true));
     const [radius, setRadius] = useState(getRndInteger(window.innerHeight / 20, window.innerHeight / 10));
     const [opacity, setOpacity] = useState(1);
 

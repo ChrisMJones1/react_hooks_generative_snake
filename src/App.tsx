@@ -4,19 +4,10 @@ import Dot from './components/Dot';
 
 import Dots from "./components/Dots";
 
-interface Color {
-    red: number;
-    blue: number;
-    green: number;
-}
 
 function App() {
-    const [mouseHover, setMouseHover] = useState(false);
-
-
-
-
     const [dots, setDots] = useState<JSX.Element[]>([]);
+
     const [count, setCount] = useState(1);
 
 
