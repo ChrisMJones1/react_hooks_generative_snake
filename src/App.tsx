@@ -42,7 +42,7 @@ function App() {
             let touch = event.touches[0];
             setCount(count + 1);
             newElement.push(<Dot key={count} x={touch.pageX} y={touch.pageY} />);
-            if(newElement.length > 100) {
+            if(newElement.length > 20) {
                 newElement.shift();
             }
 

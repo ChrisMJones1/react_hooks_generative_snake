@@ -1,4 +1,4 @@
-import React, { useState  } from 'react';
+import React, { useState, useEffect  } from 'react';
 
 
 import getRndInteger from "../functions/getRndInteger";
@@ -9,10 +9,15 @@ function Dot(props: {x: number, y: number}) {
 
 
     const [color] = useState(getRndRgbColor);
-    const [radius] = useState(getRndInteger(window.innerHeight / 20, window.innerHeight / 10));
-    const [opacity] = useState(1);
+    const [radius, setRadius] = useState(getRndInteger(window.innerHeight / 80, window.innerHeight / 50));
+    const [opacity, setOpacity] = useState(1);
 
-
+    useEffect(() => {
+        if(opacity > 0) {
+            setOpacity(opacity - 0.01);
+            setRadius(radius + 0.5);
+        }
+    }, [opacity, radius]);
 
 
     return (
