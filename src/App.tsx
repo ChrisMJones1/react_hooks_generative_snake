@@ -39,15 +39,13 @@ function App() {
 
         let newElement = dots;
 
-
-        for (let i = 0; i < event.touches.length; i++) {
-            let touch = event.touches[i];
+            let touch = event.touches[0];
             setCount(count + 1);
             newElement.push(<Dot key={count} x={touch.pageX} y={touch.pageY} />);
             if(newElement.length > 100) {
                 newElement.shift();
             }
-        }
+
 
 
         setDots(newElement);
